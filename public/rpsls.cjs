@@ -1,17 +1,18 @@
 #!/usr/bin/env node
 function rps(player_shot) {
-    if (!player_shot) {
-        let game = {
-            'player': 'rock'
-        }
-        return game;
-    }
     const rules = {
         "rock": ["scissors"],
         "paper": ["rock"],
         "scissors": ["paper"]
     }
     let options = Object.keys(rules);
+    const random_shot = options[options.length * Math.random() << 0];
+    if (!player_shot) {
+        let game = {
+            'player': random_shot
+        }
+        return game;
+    }
     let game = {
         'player': `${player_shot}`,
         'opponent': `${options[Math.floor(Math.random() * options.length)]}`,
@@ -31,12 +32,6 @@ function rps(player_shot) {
 }
 
 function rpsls(player_shot) {
-    if (!player_shot) {
-        let game = {
-            'player': 'rock'
-        }
-        return game;
-    }
     const rules = {
         "rock": ["scissors", "lizard"],
         "paper": ["rock", "spock"],
@@ -45,6 +40,13 @@ function rpsls(player_shot) {
         "spock": ["rock", "scissors"]
     }
     let options = Object.keys(rules);
+    const random_shot = options[options.length * Math.random() << 0];
+    if (!player_shot) {
+        let game = {
+            'player': random_shot
+        }
+        return game;
+    }
     let game = {
         'player': `${player_shot.toLowerCase()}`,
         'opponent': `${options[Math.floor(Math.random() * options.length)]}`,
@@ -62,5 +64,4 @@ function rpsls(player_shot) {
     }
     return game;
 }
-
-module.exports = { rps, rpsls};
+module.exports = { rps, rpsls };

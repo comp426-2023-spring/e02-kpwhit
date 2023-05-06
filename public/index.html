@@ -5,17 +5,22 @@
 
     </head>
     <body>
-        Play Rock Paper Scissors (Classic)!
-        <div id="single">
-            <h1>Play!</h1>
-            <button id="coin">Flip it!</button>
+        <nav>
+            <button id="homenav" onclick="homeNav()" class="active">Home</button>
+            <button id="rpsnav" onclick="rpsNav()">Play RPS</button>
+            <button id="rpslsnav" onclick="rpslsNav()">Play RPSLS</button>      
+        </nav>
+        <div id="home" class="active">
+            <h1>Play Rock, Paper, Scissors!</h1>
+        </div>
+        <div id="rps">
+            <button id="rps">Shoot</button>
             <h2>Result</h2>
             <p><span id="result"></span></p>
         </div>
-
     <!-- Your interface markup goes here -->
     <!-- For interface examples, look in the `/examples/` directory in the root of your starter code repo. -->
 
-    <script src="scripts.js"></script> 
+        <script src="./scripts.js"></script>
     </body>
 </html>

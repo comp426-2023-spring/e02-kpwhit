@@ -2,19 +2,21 @@
 // check out the coin-server example from a previous COMP 426 semester.
 
 // https://github.com/jdmar3/coinserver
-const shot = document.getElementById("shot");
 
-shot.addEventListener("click", shoot);
+alert("Script file connected");
 
-async function shoot() {
-    const endpoint = "app/rps/";
-    const url = document.baseURI+endpoint;
-    await fetch(url)
+const rps = document.getElementById("rps");
+rps.addEventListener("click", play);
+async function play() {
+    await fetch(document.baseURI+'app/rps/')
         .then(function(response) {
             return response.json();
         })
             .then(function(result) {
                 console.log(result);
-                document.getElementById("result").innerHTML;
+                document.getElementById("result").innerHTML = result.player;
             })
-}
+};
+
+
+
