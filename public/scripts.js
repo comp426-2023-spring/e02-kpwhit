@@ -18,5 +18,29 @@ async function play() {
             })
 };
 
-
+function homeNav() {
+    document.getElementById("homenav").className = "active";
+    document.getElementById("home").className = "active";
+    document.getElementById("rpsnav").className = "";
+    document.getElementById("rps").className = "inactive";
+    document.getElementById("rpslsnav").className = "";
+    document.getElementById("rpsls").className = "inactive";
+  }
+  function rpsNav() {
+    document.getElementById("homenav").className = "";
+    document.getElementById("home").className = "inactive";
+    document.getElementById("rpsnav").className = "active";
+    document.getElementById("rps").className = "active";
+    document.getElementById("rpslsnav").className = "";
+    document.getElementById("rpsls").className = "inactive";
+  }
+  function rpslsNav() {
+    document.getElementById("homenav").className = "";
+    document.getElementById("home").className = "inactive";
+    document.getElementById("rpsnav").className = "";
+    document.getElementById("rps").className = "inactive";
+    document.getElementById("rpslsnav").className = "active";
+    document.getElementById("rpsls").className = "active";
+  }
+  
 
