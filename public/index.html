@@ -5,20 +5,72 @@
 
     </head>
     <body>
+
         <nav>
-            <button id="homenav" onclick="homeNav()" class="active">Home</button>
-            <button id="rpsnav" onclick="rpsNav()">Play RPS</button>
-            <button id="rpslsnav" onclick="rpslsNav()">Play RPSLS</button>      
+            <button id="hometab" onclick="homeNav()" class="active">Home</button>
+            <button id="rpstab" onclick="rpsNav()">Play RPS</button>
+            <button id="rpslstab" onclick="rpslsNav()">Play RPSLS</button>      
         </nav>
+
         <div id="home" class="active">
-            <h1>Play Rock, Paper, Scissors!</h1>
+            <h1>RPS App<h1>
+            <p>Play Rock, Paper, Scissors in your browser. Now with <em>two</em> variants!</p>
         </div>
+
         <div id="rps" class="inactive">
-            <button id="rps">Shoot</button>
-            <h2>Result</h2>
-            <p><span id="result"></span></p>
+            <h1>Play classic Rock, Paper, Scissors</h1>
+            <form id="rpsform">
+                <label>
+                    <strong>Choose an option:</strong>
+                </label>
+                <select name="shot" form="rpsform">
+                    <option value="rock">Rock</option>
+                    <option value="paper">Paper</option>
+                    <option value="scissors">Scissors</option>    
+                </select>
+                <input type="submit" value="Shoot!">
+            </form>
+            <strong>Or, play rps alone with a random shot</strong>
+            <button id="rpsalone">Shoot</button>    
+            <div>
+                <h2>Player</h2>
+                <p><span id="rpsplayer"></span></p>
+                <h2>Opponent</h2>
+                <p><span id="rpsopponent"></span></p>
+                <h2>Result</h2>
+                <p><span id="rpsresult"></span></p>        
+            </div>
         </div>
-    <!-- Your interface markup goes here -->
+
+        <div id="rpsls" class="inactive">
+            <h1>Play the new Rock, Paper, Scissors, Lizard, Spock!</h1>
+            <form id="rpslsform">
+                <label>
+                    <strong>Choose an option:</strong>
+                </label>
+                <select name="shot" form="rpslsform">
+                    <option value="rock">Rock</option>
+                    <option value="paper">Paper</option>
+                    <option value="scissors">Scissors</option>
+                    <option value="lizard">Lizard</option>    
+                    <option value="spock">Spock</option>
+                </select>
+                <input type="submit" value="Shoot!">
+            </form>
+            <strong>Or, play rpsls alone with a random shot</strong>
+            <button id="rpslsalone">Shoot</button>    
+            <div>
+                <h2>Player</h2>
+                <p><span id="rpslsplayer"></span></p>
+                <h2>Opponent</h2>
+                <p><span id="rpslsopponent"></span></p>
+                <h2>Result</h2>
+                <p><span id="rpslsresult"></span></p>        
+            </div>
+        </div>
+
+
+        <!-- Your interface markup goes here -->
     <!-- For interface examples, look in the `/examples/` directory in the root of your starter code repo. -->
 
         <script src="./scripts.js"></script>
