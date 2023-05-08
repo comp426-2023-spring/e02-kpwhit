@@ -10,9 +10,9 @@
     <body>
 
         <nav>
-            <button id="hometab" onclick="homeNav()" class="active">Home</button>
-            <button id="rpstab" onclick="rpsNav()">Play RPS</button>
-            <button id="rpslstab" onclick="rpslsNav()">Play RPSLS</button>      
+            <button type="submit" id="hometab" onclick="homeNav()" class="active">Home</button>
+            <button type="submit" id="rpstab" onclick="rpsNav()">Play RPS</button>
+            <button type="submit" id="rpslstab" onclick="rpslsNav()">Play RPSLS</button>      
         </nav>
 
         <div id="home" class="active">
@@ -35,7 +35,7 @@
                 <input type="submit" value="Shoot">
             </form>
             <strong>Or, play rps alone with a random shot</strong>
-            <button id="rpsalone">Shoot</button>    
+            <button type="submit" id="rpsalone">Shoot</button>    
             <div id="rpsplayerdiv" class="inactive">
                 <h2>Player</h2>
                 <p><span id="rpsplayer"></span></p>
@@ -49,7 +49,7 @@
                 <p><span id="rpsresult"></span></p>        
             </div>
             <div id="rpsresetbuttondiv" class="inactive">
-                <button id="resetrps">Reset game</button>
+                <button type="submit" id="resetrps">Reset game</button>
             </div>    
         </div>
 
@@ -69,7 +69,7 @@
                 <input type="submit" value="Shoot">
             </form>
             <strong>Or, play rpsls alone with a random shot</strong>
-            <button id="rpslsalone">Shoot</button>    
+            <button type="submit" id="rpslsalone">Shoot</button>    
             <div id="rpslsplayerdiv" class="inactive">
                 <h2>Player</h2>
                 <p><span id="rpslsplayer"></span></p>
@@ -83,7 +83,7 @@
                 <p><span id="rpslsresult"></span></p>        
             </div>
         <div id="rpslsresetbuttondiv" class="inactive">
-            <button id="resetrpsls">Reset game</button>
+            <button type="submit" id="resetrpsls">Reset game</button>
         </div>
         </div>
 
